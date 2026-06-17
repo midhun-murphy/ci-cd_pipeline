@@ -60,6 +60,10 @@ jobs:
 
             pkill -f app.py || true
 
+            sleep 5
+
             source venv/bin/activate
 
-            nohup python app.py > app.log 2>&1 &
+            nohup python app.py > app.log 2>&1 </dev/null >/dev/null 2>&1 &
+
+            exit 0
